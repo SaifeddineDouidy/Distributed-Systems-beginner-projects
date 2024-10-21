@@ -1,0 +1,13 @@
+grant {
+        // Permission d'ouvrir et de recevoir des connexions réseau
+        permission java.net.SocketPermission "localhost:1024-", "accept,connect,resolve";
+
+        // Permission d'utiliser RMI
+        permission java.rmi.RMISecurityManager;
+
+        // Permission d'écrire dans des fichiers
+        permission java.io.FilePermission "<<ALL FILES>>", "read,write";
+
+        // Permission de quitter la JVM
+        permission java.lang.RuntimePermission "exitVM";
+};
